@@ -20,7 +20,7 @@ public class Database {
         return instance;
     }
 
-    //입력의 역할
+    //입력(저장)의 역할
     public void add(Person person) {
         personList.add(0, person);
         notifyChange();

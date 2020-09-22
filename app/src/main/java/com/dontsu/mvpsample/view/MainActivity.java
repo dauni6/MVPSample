@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         adapter = new MainAdapter(this); //adapter 설정
         recyclerView.setLayoutManager(linearLayoutManager); //layoutmanager 설정
         recyclerView.setAdapter(adapter); //adapter 연결
-        presenter = new MainPresenter(Database.getInstance(), this);
+        presenter = new MainPresenter(Database.getInstance(), this); //singleton 으로 단 하나만 생성
         presenter.load();
     }
 
